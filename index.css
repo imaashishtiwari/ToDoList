@@ -1,39 +1,69 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    
+* {
+    box-sizing: border-box;
 }
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+
 /*flex box start*/
-.flex-parent-element{
+.flex-parent-element {
     display: flex;
     margin-top: 100px;
     width: 100%;
-    height:500px;
+    height: 500px;
 }
 
 
-.flex-child-element
-{
+.flex-child-element {
     flex: 1;
-    border: 2px solid orange;
-    margin: 10px;
+    border: 2px solid orange; 
+    margin: 48px;
+
 }
 
-.flex-child-element:first-child{
-    margin-right:20px;
+.flex-child-element{
+    margin-right: 20px;
 }
 
 /*flex box end*/
 
 /*Slider start*/
+.mySlides {
+    display: none;
+}
+
+/* slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
 
 
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
 /*Slider end*/
 
 
 
 /*modal start*/
 
-.modal{
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -44,10 +74,9 @@ body {
     overflow: auto;
     background-color: cyan;
     background-color: rgba(255, 45, 75, 0.5)
-    
 }
 
-.modal-content{
+.modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
@@ -56,24 +85,24 @@ body {
     height: 50%;
 }
 
-.close{
+.close {
     color: #aaa;
-    float:right;
+    float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
 .close:hover,
-.close:focus{
-    color:black;
+.close:focus {
+    color: black;
     text-decoration: none;
-    cursor :pointer;
+    cursor: pointer;
 }
 
 /*modal end*/
 
-.btnStyle{
-    background-color:rgb(9, 109, 87);
+.btnStyle {
+    background-color: rgb(9, 109, 87);
     border-radius: 5px;
     border: none;
     color: rgb(245, 242, 236);
@@ -82,7 +111,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 200px 250px;
+    margin: 200px;
     cursor: pointer;
-    
-  }
+    margin-left: 230px;
+}
