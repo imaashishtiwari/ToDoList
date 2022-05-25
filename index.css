@@ -4,8 +4,15 @@
 
 body {
     font-family: Verdana, sans-serif;
+    background-color: bisque;
 }
 
+/* image css slider */
+.imgStyle {
+width: 100%; 
+height: 350px;
+border-radius: 10px;
+}
 
 /*flex box start*/
 .flex-parent-element {
@@ -16,16 +23,19 @@ body {
 }
 
 
-.flex-child-element {
+.flex-child-element1 {
     flex: 1;
-    border: 2px solid orange; 
+    /*border: 2px solid orange;*/
     margin: 48px;
-
+    margin-left: 80px;
 }
 
-.flex-child-element{
-    margin-right: 20px;
+.flex-child-element2 {
+    flex: 1;
+   /* border: 2px solid orange;*/
+    margin: 40px;
 }
+
 
 /*flex box end*/
 
@@ -73,16 +83,17 @@ body {
     height: 100%;
     overflow: auto;
     background-color: cyan;
-    background-color: rgba(255, 45, 75, 0.5)
+    background-color: rgba(0, 0, 0, 0.5)
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color:bisque;
+    border-radius: 10px;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
-    height: 50%;
+    height: 40%;
 }
 
 .close {
@@ -110,8 +121,41 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 0.91rem;
     margin: 200px;
     cursor: pointer;
     margin-left: 230px;
 }
+
+
+/* input form modal */
+
+.inputName, .inputPWD{
+    width:100%;
+    padding: 12px 20px;
+    margin:8px 0;
+    box-sizing: border-box;
+    border: 2px solid 222;
+    border-radius:4px;
+}
+
+.formBTN{
+    background-color: #222;
+    border-radius: 4px;
+    
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    min-height: 44px;
+    min-width: 10px;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
