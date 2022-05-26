@@ -9,6 +9,35 @@ body {
     /*color:red;*/
 }
 
+@media all and (max-width : 500px){
+    body{
+        background-color:rgb(9, 109, 87);
+    }
+
+    .flex-parent-element {
+        display: flex;
+        margin-top: 100px;
+        width: 100%;
+        height: 00px;
+    }
+    
+    
+    .flex-child-element1 {
+        flex: 1;
+        border: 2px solid orange;
+        margin: 48px;
+        margin-left: 80px;
+    }
+    
+    .flex-child-element2 {
+        flex: 1;
+       border: 2px solid orange;
+        margin: 40px;
+    }
+
+
+    
+}
 /* image css slider */
 .imgStyle {
 width: 100%; 

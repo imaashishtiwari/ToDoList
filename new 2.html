@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width-device-width, initial scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="new 2.css">
+</head>
+<body>
+<h1>Adding and Removing list item</h1>
+<form>
+<input type="text" name="text" id="txt" required>
+<button type="submit" class="btn-list">Add
+<i class="fa fa-plus"aria-hidden="true"></i>
+</button>
+</form>
+<div class="container">
+<ul>
+
+</ul>
+</div>
+<script>
+const inputText=document.querySelector('#txt');
+const myButton=document.querySelector('.btn-list');
+const list=document.querySelector('.container ul');
+myButton.addEventListener('click',(e)=>{
+  if(inputText.value!=""){
+  e.preventDefault();
+  
+  const myLi=document.createElement('li');
+  myLi.innerHTML=inputText.value;
+  list.appendChild(myLi);
+  
+  const mySpan=document.createElement('span');
+  mySpan.innerHTML='x';
+  myLi.appendChild(mySpan);
+  }
+  const close=document.querySelectorAll('span');
+  for(let i=0;i<close.length;i++){
+  close[i].addEventListener('click',()=>{
+  close[i].parentElement.style.display="none";
+  })
+  }
+  inputText.value="";
+  });
+  </script>
+</body>
+</html>
