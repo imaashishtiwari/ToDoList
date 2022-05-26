@@ -39,3 +39,19 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
+
+
+/* form link */
+
+function validForm(){
+  let name = document.myForm.firstName.value;
+  let password = document.myForm.enterPassword.value;
+
+  if (name == null || name == ""){
+    alert ("Please enter your name and password.");
+    return false;
+  } else if(password.length<6){
+    alert("Password must be 6 character long.");
+    return false;
+  }
+}

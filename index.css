@@ -4,7 +4,8 @@
 
 body {
     font-family: Verdana, sans-serif;
-    background-color: bisque;
+    background-color: #f16775;
+    overflow: hidden;
 }
 
 /* image css slider */
@@ -19,7 +20,7 @@ border-radius: 10px;
     display: flex;
     margin-top: 100px;
     width: 100%;
-    height: 500px;
+    height: 00px;
 }
 
 
@@ -87,7 +88,7 @@ border-radius: 10px;
 }
 
 .modal-content {
-    background-color:bisque;
+    background-color:white;
     border-radius: 10px;
     margin: 15% auto;
     padding: 20px;
