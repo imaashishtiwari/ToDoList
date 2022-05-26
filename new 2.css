@@ -23,11 +23,12 @@ h1{
 form{
 	margin-top:50px;
 	background:#fff;
+	font-size: 0px;
 	box-shadow:-3px 6px 4px #222;
 }
 
 form input{
-	width:250px;
+	width:350px;
 	height:40px;
 	border:none;
 	outline:none;
