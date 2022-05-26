@@ -9,33 +9,19 @@ body {
     /*color:red;*/
 }
 
-@media all and (max-width : 500px){
+@media all and (max-width : 414px){
     body{
-        background-color:rgb(9, 109, 87);
+        background-color:#05445E;
     }
 
     .flex-parent-element {
         display: flex;
-        margin-top: 100px;
         width: 100%;
-        height: 00px;
     }
-    
     
     .flex-child-element1 {
-        flex: 1;
-        border: 2px solid orange;
-        margin: 48px;
-        margin-left: 80px;
+        display: none;       
     }
-    
-    .flex-child-element2 {
-        flex: 1;
-       border: 2px solid orange;
-        margin: 40px;
-    }
-
-
     
 }
 /* image css slider */
@@ -124,8 +110,32 @@ border-radius: 10px;
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
-    height: 40%;
 }
+@media all and (max-width : 414px){
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: cyan;
+        background-color: rgba(0, 0, 0, 0.5)
+    }
+
+    .modal-content {
+        margin-top: 350px;
+        background-color:white;
+        border-radius: 10px;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+}
+
+
 
 .close {
     color: #aaa;
@@ -156,8 +166,23 @@ border-radius: 10px;
     margin: 200px;
     cursor: pointer;
     margin-left: 230px;
-}
 
+}
+@media all and (max-width : 414px){
+    .btnStyle{
+        font-family: "Times New Roman", Times, serif;
+        background-color:#75E6DA;
+        border-radius: 5px;
+        border: none;
+        color: rgb(2, 0, 1);
+        padding: 12px 70px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 38px;
+        margin: 250px 0px 0px 0px;
+    }
+}
 
 /* input form modal */
 
@@ -173,7 +198,6 @@ border-radius: 10px;
 .formBTN{
     background-color: #222;
     border-radius: 4px;
-    
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
