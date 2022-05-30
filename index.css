@@ -1,12 +1,40 @@
-* {
-    box-sizing: border-box;
+:root{
+	--dark: #374151;
+	--darker: #1f2937;
+	--darkest: #111827;
+	--gray: #687280;
+	--light: #eee;
+	--pink: #ec4899;
+	--purple: #800080;
 }
 
+*{
+	box-sizing: border-box;
+	margin: 0;
+	font-family: "Fira sans", sans-serif;
+}
 body {
-    font-family: Verdana, sans-serif;
-    background-color: #f16775;
-    overflow: hidden;
-    /*color:red;*/
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background: var(--dark);
+	color: #fff;
+	overflow:var(--darker);
+}
+
+header{
+	padding:2rem 1rem;
+	max-width: 800px;
+	width:100%;
+	margin: 0 auto;
+}
+
+header h1{
+    margin: 0px 0px 0px 250px;
+	font-size: 2.5rem;
+	font-weight:300;
+	color:var(--light);
+	margin-bottom:1rem;
 }
 
 @media all and (max-width : 414px){
@@ -14,9 +42,15 @@ body {
         background-color:#05445E;
     }
 
+    header h1{
+        display: inline;
+        margin: 0px 0px 0px 6.5rem;
+        background-color: #05445E;
+    }
+
     .flex-parent-element {
-        display: flex;
-        width: 100%;
+        display: none;
+        
     }
     
     .flex-child-element1 {
@@ -34,23 +68,20 @@ border-radius: 10px;
 /*flex box start*/
 .flex-parent-element {
     display: flex;
-    margin-top: 100px;
-    width: 100%;
-    height: 00px;
+    margin: 50px 0px 0px 0px;
 }
 
-
 .flex-child-element1 {
-    flex: 1;
-    /*border: 2px solid orange;*/
-    margin: 48px;
-    margin-left: 80px;
+    width: 100%;
+    border-color: #800080;
+    margin: 0px 0px 50px 80px;
 }
 
 .flex-child-element2 {
-    flex: 1;
-   /* border: 2px solid orange;*/
-    margin: 40px;
+    width: 100%;
+    border-color: #800080;
+    margin: 0px 0px 0px 0px;
+        /* top right down left*/
 }
 
 
@@ -121,7 +152,7 @@ border-radius: 10px;
         width: 100%;
         height: 100%;
         overflow: auto;
-        background-color: cyan;
+        background-color: var(--light);
         background-color: rgba(0, 0, 0, 0.5)
     }
 
@@ -154,10 +185,10 @@ border-radius: 10px;
 /*modal end*/
 
 .btnStyle {
-    background-color: rgb(9, 109, 87);
+    background-color: var(--light);
     border-radius: 5px;
     border: none;
-    color: rgb(245, 242, 236);
+    color: var(--darker);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -170,17 +201,19 @@ border-radius: 10px;
 }
 @media all and (max-width : 414px){
     .btnStyle{
+        
+        width: 100%;
         font-family: "Times New Roman", Times, serif;
-        background-color:#75E6DA;
-        border-radius: 5px;
+        background-color:var(--darker);
+        border-radius: 0px;
         border: none;
-        color: rgb(2, 0, 1);
-        padding: 12px 70px;
+        color: var(--light);
+        padding: 8px 8px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 38px;
-        margin: 250px 0px 0px 0px;
+        margin: 60px 0px 0px 25px;
     }
 }
 

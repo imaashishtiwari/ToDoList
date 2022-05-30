@@ -1,68 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width-device-width, initial scale=1.0">
- <title>Document</title>
- <link rel="stylesheet" href="new 2.css">
- <script src="https://kit.fontawesome.com/a5f95f82b5.js" crossorigin="anonymous"></script>
-<style>
-
-.calendarDate{
-background-color: rgb(14, 136, 51);
-width: 100px;
-font-size: 0.8rem;
-font-family: Georgia, serif;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial scale=1.0">
+    <title>Document</title>   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="new 2.css">
+    
 </head>
 
-
 <body>
-<h1>Adding and Removing list item</h1>
-<div class="flex-container">
-  <form>
-    <input type="text" name="text" id="txt" required>
-    <input type="date" class="calendarDate">
-    <button type="submit" class="btn-list">Add
-    <i class="fa fa-plus"aria-hidden="true"></i>
-    </button>
-    </form>
-    <div class="container">
-    <ul>
-    
-    </ul>
-    </div>
+<div class="container">
+    <header>
+        <h1> To Do List </h1>
+            <form class="new-task-form">
+                <input type="text" id="inp" class="new-task-input" placeholder="What do you have planned?" required/>
+                <input type="date" id="calendar" class="inputCalendar">
+                <button id="btn" class="new-task-submit"> Add Task</button>
+            </form>
+    </header>
+    <main>
+        <section class="task-list">
+            <h2>Tasks</h2>
+                    <div class="content">
+                        <ul type="text" id="todoList" >
+                            
+                        </ul>
+                    </div>
+        </section>
+    </main>
 </div>
-<script>
-const inputText=document.querySelector('#txt');
-const myButton=document.querySelector('.btn-list');
-const list=document.querySelector('.container ul');
-myButton.addEventListener('click',(e)=>{
-  if(inputText.value!=""){
-  e.preventDefault();
-  
-  const myLi=document.createElement('li');
-  myLi.innerHTML=inputText.value;
-  list.appendChild(myLi);
-  
-  const mySpan=document.createElement('span');
-  mySpan.innerHTML='x';
-  myLi.appendChild(mySpan);
-  }
-  const close=document.querySelectorAll('span');
-  for(let i=0;i<close.length;i++){
-  close[i].addEventListener('click',()=>{
-  close[i].parentElement.style.display="none";
-  })
-  }
-  inputText.value="";
-  });
 
-
-
-  </script>
+<script src="new2.js"></script>
 </body>
 </html>

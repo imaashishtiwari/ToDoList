@@ -1,78 +1,130 @@
+:root{
+	--dark: #374151;
+	--darker: #1f2937;
+	--darkest: #111827;
+	--gray: #687280;
+	--light: #eee;
+	--pink: #ec4899;
+	--purple: #800080;
+}
+
 *{
-	font-family:'Montserrat',sans-serif;
-	margin:0;
-	padding:0;
-	box-sizing:border-box;
+	box-sizing: border-box;
+	margin: 0;
+	font-family: "Fira sans", sans-serif;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background: var(--dark);
+	color: #fff;
+	overflow:var(--darker);
 }
 
-body{
-	min-height:100vh;
-	background:linear-gradient(65deg, rgb(172,22,212),
-	rgb(287,14,44));;
-	
-	display:flex;
-	flex-direction:column;
-	align-items:center;
-}
-
-h1{
-	color:green;
-	margin-top:100px;
-}
-
-form{
-	margin-top:50px;
-	background:#fff;
-	font-size: 0px;
-	box-shadow:-3px 6px 4px #222;
-}
-
-form input{
-	width:350px;
-	height:40px;
-	border:none;
-	outline:none;
-	padding:0.5px;
-}
-
-form button{
-	width:50px;
-	height:40px;
-	border:none;
-	background:teal;
-	color:white;
-	outline:none;
-	cursor:pointer;
-}
-
-.container{
-	margin-top:50px;
-}
-
-ul{
-	list-style:none;
-	width:500px;
-}
-
-ul li{
+header{
+	padding:2rem 1rem;
+	max-width: 800px;
 	width:100%;
-	background:#ffff;
-	height:40px;
-	line-height:40px;
-	padding:0.5px;
-	position:relative;
-	cursor:pointer;
-	display:block;
-	margin:5px;
-	box-shadow:-3px 6px 4px #222;
+	margin: 0 auto;
+}
+
+header h1{
+	font-size: 2.5rem;
+	font-weight:300;
+	color:var(--gray);
+	margin-bottom:1rem;
+}
+
+.new-task-form{
+	display: flex;
+}
+
+input, button{
+	appearance: none;
+	border: none;
+	outline:none;
+	background: none;
+}
+
+.new-task-input{
+	flex:1 1 0%;
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius:1rem;
+	margin-left:1rem;
+	color:var(--light);
+}
+.new-task-input::placeholder{
+	color: var(--gray);
+}
+
+.new-task-submit{
+	color: var(--pink);
+	font-size:1.25rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--pink),var(--purple));
+	-webkit-background-clip:text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.new-task-submit:hover{
+	opacity: 0.8;
+}
+
+.new-task-input:active{
+	opacity: 0.6;
+}
+
+main{
+	flex: 1 1 0%;
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.tasklist{
+	padding:1rem;
+}
+
+.task-list h2{
+	font-size:1.5rem;
+	font-weight: 300;
+	color: var(--grey);
+	margin-bottom: 1rem;
 }
 
 
-ul li span{
-	position:absolute;
-	top:0;
-	right:0;
-	width:50px;
-	text-align:center;
-	background:#e19;
+li{
+	list-style: none;
+	flex:1 1 0%;
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius:1rem;
+	margin-left:1rem;
+	color:var(--light);
+	margin-top: 20px;
+}
+
+#todoList li a{
+	font-size: 18px;
+	font-weight: 300;
+	float: right;
+	cursor: pointer;
+	margin: 0px 0px 0px 10px;
+}
+
+
+
+.inputCalendar{
+	color: var(--white);
+	padding:0px 10px 0px 10px;
+	background-color: #687280;
+	border-radius: 20px;
+	margin: 0 0 0 10px;
+	cursor: pointer;
+	
 }
